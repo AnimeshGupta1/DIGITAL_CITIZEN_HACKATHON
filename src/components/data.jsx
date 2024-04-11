@@ -3,7 +3,7 @@
 export const feedItems = [
     {
       user: {
-        name: 'John Doe',
+        name: 'Animesh Gupta',
         profilePicture: 'https://randomuser.me/api/portraits/men/1.jpg'
       },
       content: 'This is the content of the first post.',
@@ -13,7 +13,7 @@ export const feedItems = [
     },
     {
       user: {
-        name: 'Jane Smith',
+        name: 'Amisha Gupta',
         profilePicture: 'https://randomuser.me/api/portraits/women/2.jpg'
       },
       content: 'This is the content of the second post.',
