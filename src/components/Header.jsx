@@ -13,7 +13,7 @@ const Header = () => {
                     <img className="w-10" src={"https://delhi.gov.in/sites/default/files/emblem-dark.png"} alt="Logo" />
                 </div>
                 <div className="flex flex-1 mx-10 justify-center items-center">
-                    <input type="text" className="border-4 rounded-full p-2 mr-2 flex-1 mx-2" value={searchText} onChange={(e) => {
+                    <input type="text" className="border-4 rounded-full p-2 mr-2 flex-1 mx-2" value={searchText} placeholder="    Search For Anything!" onChange={(e) => {
                         setsearchText(e.target.value);
                     }}></input>
                     <button onClick={() => {

@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from './Footer';
 import ProblemReportingForm from './ProblemReportingForm';
 import CitizenProfile from './CitizenProfile';
+import ProblemDashboard from './ProblemDashboard';
 import Feed from './Feed';
 
 function Landing() {
@@ -23,7 +24,10 @@ function Landing() {
                   <button className="bg-white text-blue-500 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-400 hover:text-white transition duration-300">Learn More</button>
               </div>
       </div>
-      <Feed/>
+      <Feed />
+      <CitizenProfile />
+      <ProblemDashboard />
+      <ProblemReportingForm />
       <Footer />
       
     </div> 
