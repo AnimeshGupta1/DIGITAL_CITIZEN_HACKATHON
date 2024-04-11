@@ -1,0 +1,49 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+const Header = () => {
+    let btnName = "Login";
+    const [btnNameReact, setbtnNameReact] = useState("Login");
+    return (
+        <div className="Header">
+            <div className="Top_Header">
+                <div className="Right">
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about">About Us</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact">Contact Us</Link>
+                        </li>
+                        <button className="login" onClick={() => {
+                            btnNameReact==="Login"?setbtnNameReact("Logout"):setbtnNameReact("Login");
+                        }}>{btnNameReact}</button>
+                    </ul>
+                </div>
+            </div>
+            <div className="Middle_Header">
+                <div className="logo-container" >
+                    <img className="logo" src={"https://delhi.gov.in/sites/default/files/emblem-dark.png"} />
+                </div>
+            </div>
+            <div className="Bottom_Header">
+                <ul>
+                    <li>
+                        <Link to="/feed">Feed</Link>
+                    </li>
+                    <li>
+                        <Link to="/complaint">Complaint</Link>
+                    </li>
+                    <li>
+                        <Link to="/stats">Stats</Link>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    )
+}
+export default Header;
