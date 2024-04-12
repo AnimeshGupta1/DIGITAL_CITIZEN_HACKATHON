@@ -28,7 +28,7 @@ const Header = () => {
                         <Link to="/contact">Contact Us</Link>
                     </li>
                     <li>
-                        <button className="login bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-0.5 px-4 rounded-lg transition-colors duration-300" onClick={() => {
+                        <button className="bg-blue-500 text-white font-bold py-0.5 px-4 rounded-lg hover:bg-blue-400 transition-colors duration-300" onClick={() => {
                             setbtnNameReact(btnNameReact === "Login" ? "Logout" : "Login");
                         }}>{btnNameReact}</button>
                     </li>
@@ -45,7 +45,7 @@ const Header = () => {
                         <Link to="/feed">Feed</Link>
                     </li>
                     <li>
-                        <Link to="/services">Services</Link>
+                        <Link to="/services">Developments</Link>
                     </li>
                     <li>
                         <Link to="/notices">Notice Board</Link>

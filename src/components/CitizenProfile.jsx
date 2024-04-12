@@ -40,10 +40,7 @@ const dummyComplaints = [
 const CitizenProfile = () => {
     const [complaints, setComplaints] = useState(dummyComplaints);
     const [selectedComplaint, setSelectedComplaint] = useState(null);
-
-    // Function to handle complaint submission (dummy function for demo purposes)
     const handleComplaintSubmit = (formData) => {
-        // For demo purposes, we'll just console log the submitted data
         console.log("Submitted complaint:", formData);
     };
 
@@ -53,12 +50,12 @@ const CitizenProfile = () => {
             <div className="grid grid-cols-2 gap-8">
                 <div>
                     <h2 className="text-xl font-bold mb-4">Submitted Complaints</h2>
-                    <ul>
+                    <ul className="divide-y divide-gray-200">
                         {complaints.map(complaint => (
-                            <li key={complaint.id} onClick={() => setSelectedComplaint(complaint)}>
-                                <h3>{complaint.title}</h3>
-                                <p>Status: {complaint.status}</p>
-                                <p>Date Submitted: {complaint.dateSubmitted}</p>
+                            <li key={complaint.id} onClick={() => setSelectedComplaint(complaint)} className="cursor-pointer p-4 hover:bg-gray-100 shadow-md rounded-md">
+                                <h3 className="text-lg font-semibold">{complaint.title}</h3>
+                                <p className="text-sm text-gray-500">Status: {complaint.status}</p>
+                                <p className="text-sm text-gray-500">Date Submitted: {complaint.dateSubmitted}</p>
                             </li>
                         ))}
                     </ul>
@@ -67,17 +64,15 @@ const CitizenProfile = () => {
                     {selectedComplaint ? (
                         <>
                             <h2 className="text-xl font-bold mb-4">Complaint Details</h2>
-                            <div>
-                                <h3>{selectedComplaint.title}</h3>
-                                <p>Status: {selectedComplaint.status}</p>
-                                <p>Date Submitted: {selectedComplaint.dateSubmitted}</p>
-                                <p>Description: {selectedComplaint.description}</p>
-                                <h4>Actions:</h4>
-                                <ul>
+                            <div className="border border-gray-200 rounded-md p-4 shadow-md">
+                                <h3 className="text-lg font-semibold">{selectedComplaint.title}</h3>
+                                <p className="text-sm text-gray-500">Status: {selectedComplaint.status}</p>
+                                <p className="text-sm text-gray-500">Date Submitted: {selectedComplaint.dateSubmitted}</p>
+                                <p className="text-sm text-gray-500">Description: {selectedComplaint.description}</p>
+                                <h4 className="text-sm font-semibold">Actions:</h4>
+                                <ul className="divide-y divide-gray-200">
                                     {selectedComplaint.actions.map(action => (
-                                        <li key={action.id}>
-                                            {action.action} - {action.date}
-                                        </li>
+                                        <li key={action.id} className="cursor-pointer p-4 hover:bg-gray-100 shadow-md rounded-md">{action.action} - {action.date}</li>
                                     ))}
                                 </ul>
                             </div>
