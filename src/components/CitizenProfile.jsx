@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import StatusGraph from './StatusGraph';
 // Dummy data for citizen's complaints
 const dummyComplaints = [
     {
@@ -85,19 +85,18 @@ const CitizenProfile = () => {
                 </div>
             </div>
             {/* Placeholder for Graph component */}
-            <div className="mt-8">
-                <h2 className="text-xl font-bold mb-4">Complaint Status Graph</h2>
-                <p>Graph component will go here</p>
-            </div>
-            {/* Placeholder for ActionsList component */}
-            <div className="mt-8">
-                <h2 className="text-xl font-bold mb-4">Actions Taken on Your Complaints</h2>
-                <p>ActionsList component will go here</p>
-            </div>
-            {/* Placeholder for ComplaintForm component */}
-            <div className="mt-8">
-                <h2 className="text-xl font-bold mb-4">Submit a New Complaint</h2>
-                <p>ComplaintForm component will go here</p>
+            <div className='grid grid-cols-2 gap-8'>
+                <div className="mt-8 flex">
+                    <p><StatusGraph /></p>
+                </div>
+                {/* Placeholder for ComplaintForm component */}
+                <div className="mt-8">
+                    <h2 className="text-xl font-bold py-6 mb-4">Submit a New Complaint</h2>
+                    <div className="flex flex-col items-center text-center">
+                        <hr className="w-1/2 border-gray-300 my-4" />
+                        <button onClick={() => handleComplaint()} className="bg-white text-blue-500 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-400 hover:text-white transition duration-300">Register</button>
+                    </div>
+                </div>
             </div>
         </div>
     );

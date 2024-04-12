@@ -6,6 +6,8 @@ import ProblemDashboard from './ProblemDashboard';
 import Testimonials from './Testimonials';
 import Feed from './Feed';
 import RoutingFeatures from './RoutingFeatures';
+import NoticeBoard from './Notices';
+
 function Landing() {
   return (
     <div>
@@ -32,13 +34,9 @@ function Landing() {
     </div>
 
 
-
-      {/* <Feed /> */}
       <RoutingFeatures />
       <Testimonials />
-      <CitizenProfile />
-      {/* <ProblemDashboard /> */}
-      {/* <ProblemReportingForm /> */}
+      <NoticeBoard />
       <Footer />
     </div> 
   );
